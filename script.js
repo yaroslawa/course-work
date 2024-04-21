@@ -6,17 +6,6 @@ var
 canv.width = window.innerWidth;
 canv.height = window.innerHeight;
 
-var x = 50;//ось Х квадрата
-
-
-// //таймер на 10 милисек чтобф квадратик ушел вправо
-// setInterval(function(){
-//     ctx.fillStyle = "#000000"
-//     ctx.fillRect(0, 0, canv.width, canv.height)
-//     ctx.fillStyle = "#e5f1f6";
-//     ctx.fillRect(x++, 50, 300, 200);
-// }, 10);
-
 canv.addEventListener("mousedown", function(e){
     isMouseDown = true;
 
@@ -66,7 +55,7 @@ canv.addEventListener("touchmove", function(e){
     
     if (touchStart != null){
          //дорисовать линию к текущей позиции от последней
-         ctx.strokeStyle = "red";
+         ctx.strokeStyle = "rgb(72, 77, 227)";
          ctx.lineWidth = 20*2;
          ctx.lineTo(e.changedTouches[0].clientX, e.changedTouches[0].clientY);
          ctx.stroke();
@@ -74,7 +63,7 @@ canv.addEventListener("touchmove", function(e){
          //нарисовать круг
          ctx.beginPath();
          ctx.arc(e.changedTouches[0].clientX, e.changedTouches[0].clientY, 20, 0, Math.PI*2);
-         ctx.fillStyle = "red";
+         ctx.fillStyle = "rgb(72, 77, 227)";
          ctx.fill();
 
          //начать новый путь, смена позиции
