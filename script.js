@@ -99,7 +99,7 @@ btn2.addEventListener('click', function(){
 // получить новое слово
 const btn1 = document.querySelector('.btn1');
 const tgBotToken = "6911582749:AAF3yK76iQaPCLw_xaDBCxoaqAkIGyQzSMg";
-const tgChatID = "@N_o_tification_Bot";
+const tgChatID = sessionStorage.getItem("key");
 const api = `https://api.telegram.org/bot${tgBotToken}/sendMessage`;
 btn1.addEventListener("click", async function(){
 
@@ -119,12 +119,17 @@ btn1.addEventListener("click", async function(){
                 text,
             })
         });
-        // if(response.ok){
-
-        // }
+        if(response.ok){
+            alert("В указанную вами беседу отправлено новое слово!");
+        }
+        else{
+            throw new Error(response.statusText);
+        }
     }
     catch(error){
-
+        console.error(error);
+        alert("Ошибка отправки сообщения. Проверьте правильность введенной сылки.");
+        
     }
 })
 
