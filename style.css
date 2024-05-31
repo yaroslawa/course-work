@@ -32,10 +32,10 @@ html, body {
 }
 .footer, .footerRules{
     width: 100%;
+    height: 15%;
     position: absolute;
 	left: 0;
 	bottom: 0;
-    height: 15%;
     background-color: #A4BB1A;
 }
 
@@ -64,7 +64,7 @@ html, body {
 }
 .main, .mainRules{
     width: 100vw;
-/*     height: 85%; */
+    height: 85%;
     background-color: #DDDDE2;
     display: flex;
     flex-direction: column;
