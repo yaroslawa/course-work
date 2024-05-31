@@ -3,21 +3,91 @@
     margin: 0;
     box-sizing: border-box;
 }
-
-.header, .footer, .headerGame{
-    width: 100%;
+a{
+    text-decoration: none;
+}
+::-webkit-scrollbar{
+    width: 0;
+    height: 0;
+}
+    
+.header, .headerRules{
+    width: 100vw;
     height: 100px;
+    background-color: #A4BB1A;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: the_weekend;
+    font-size: 250%;
+    user-select: none;
+}
+html, body {
+    height: 100%;
+    overflow: hidden;
+ }
+.wrapper {
+	position: relative;
+	height: 100vh;
+}
+.footer, .footerRules{
+    width: 100%;
+    position: absolute;
+	left: 0;
+	bottom: 0;
+    height: 50px;
     background-color: #A4BB1A;
 }
 
-.main, .mainGame{
+.headerGame{
+    /* position: absolute; */
+    width: 100vw;
+    height: 100px;
+    background-color: #A4BB1A;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#canvas{
+  
+    /* border: 2px solid red; */
+    position: relative;
     width: 100%;
-    height: 600px;
+    height: 100vh;
+    right: 50%;
+    transform: translateX(50%);
+}
+.logo{
+    width: auto;
+    height: auto;
+    margin-right: 20px;
+}
+.main, .mainRules{
+    width: 100vw;
+    height: 85%;
     background-color: #DDDDE2;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    font-family: the_weekend;
+    font-size: 140%;
+}
+.mainGame{
+    background-color: #DDDDE2;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-family: the_weekend;
+    font-size: 140%;
+    width: 100vw;
+}
+
+.botBtn{
+    width: 250px;
+    height: 250px;
+    cursor: pointer;
 }
 
 .btnPlay{
@@ -25,10 +95,150 @@
     height: 60px;
     background-color: #A4BB1A;
     margin: 20px;
+    user-select: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #000000;
 }
+.btnPlay:active{
+    color: #556014;
+}
+
 .btnRules{
     width: 250px;
     height: 60px;
     background-color: #869a15;
+    user-select: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #000000;
+}
+.btnRules:active{
+    color: #556014;
+    
+}
+.textRules{
+    width: 60%;
+    height: 600px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
+/* получить новое слово */
+.btn1{
+    width: auto;
+    height: 80px;
+    background-color: #869a15;
+    margin-right: 20px;
+    cursor: pointer;
+    font-family: the_weekend;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* очистить поле */
+.btn2{
+    width: auto;
+    height: 80px;
+    background-color: #869a15;
+    margin-right: 20px;
+    cursor: pointer;
+    font-family: the_weekend;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* блок для размеров кистей */
+.brushSize{
+    width: 100px;
+    height: 80px;
+    /* background-color: bisque; */
+    margin-right: 20px;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: space-between;
+
+}
+.sizeSmall{
+    width: 15px;
+    height: 15px;
+    border-radius: 15px;
+    background-color: #DDDDE2;
+}
+.sizeMedium{
+    width: 25px;
+    height: 25px;
+    border-radius: 25px;
+    background-color: #DDDDE2;
+}
+.sizeBig{
+    width: 35px;
+    height: 35px;
+    border-radius: 35px;
+    background-color: #DDDDE2;
+}
+.nav{
+    width: 100px;
+}
+
+.brushScale{
+    position: absolute;
+    display: none;
+    width: 10px;
+    height: 10px;
+    background-color: #A4BB1A;
+    right: 50%;
+    transform: translateX(50%);
+}
+
+.colorPalette{
+    width: 200px;
+    height: 80px;
+    margin-right: 20px;
+    display: flex;
+    align-items: center;
+}
+.colorRed{
+    width: 40px;
+    height: 40px;
+    background-color: red;
+}
+.colorBlue{
+    width: 40px;
+    height: 40px;
+    background-color: blue;
+}
+.colorGreen{
+    width: 40px;
+    height: 40px;
+    background-color: green;
+}
+.colorYellow{
+    width: 40px;
+    height: 40px;
+    background-color: yellow;
+}
+.color{
+    padding: 0;
+    margin: 0;
+    height: 40px;
+    width: 40px;
+}
+.eraser{
+    width: auto;
+    height: 80px;
+    margin-right: 20px;
+    cursor: pointer;
+    font-family: the_weekend;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    user-select: none;
+}
