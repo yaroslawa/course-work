@@ -89,6 +89,23 @@ html, body {
     height: 250px;
     cursor: pointer;
 }
+.form{
+    width: 250px;
+    padding: 2px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    
+}
+.inputText{
+    height: 30px;
+}
+.btnDone{
+    height: 30px;
+    width: 40px;
+    background-color: #A4BB1A;
+}
 
 .btnPlay{
     width: 250px;
