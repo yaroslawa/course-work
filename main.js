@@ -18,6 +18,10 @@ botBtn.addEventListener('click', function(){
     btnDone.className ='btnDone';
     form.appendChild(btnDone);
 
+    const textP = document.createElement("p");
+    textP.innerHTML = "Готово";
+    btnDone.appendChild(textP);
+
     btnDone.addEventListener("click", function(){
         let str = inp.value;
         if(str.length < 13){
