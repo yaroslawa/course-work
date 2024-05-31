@@ -2,17 +2,44 @@
 <html lang="ru">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="img/logo.png" />
     <title>Game</title>
-    <link rel="stylesheet" href="script.js">
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="font.css">
 </head>
 <body>
-    <div class="headerGame"></div>
-    <div class="mainGame">
-        <canvas id = "canvas">Обновите браузер</canvas>
-        <script src = "script.js"></script>
+    <div class="wrapper">
+        <div class="headerGame">
+            <a href="index.html">
+                <div class="logo">
+                    <img src="img/logo.png" alt="" >
+                </div>
+            </a>
+            <div class="btn1" onsubmit = "sendEmailTelegram(event)"><p>Получить новое слово</p></div>
+            <div class="btn2"><p>Очистить поле</p></div>
+            <div class="brushSize">
+                <div class="sizeSmall"></div>
+                <div class="sizeMedium"></div>
+                <div class="sizeBig"></div>
+                <input type="range" min="5" max="45" value="15" step="1" class="nav"/>
+            </div>
+            <div class="colorPalette">
+                <div class="colorRed"></div>
+                <div class="colorBlue"></div>
+                <div class="colorGreen"></div>
+                <div class="colorYellow"></div>
+                <input type="color" name="" class="color">
+            </div>
+            <div class="eraser"><img src="img/eraser.png" width="55px" height="55px" ></div>
+        </div>
+        <div class="mainGame">
+            <canvas id = "canvas" class="ctx" width="1080px" height="800px" >Обновите браузер</canvas>
+            <div class="brushScale"></div>
+        </div>
+        <div class="footer"></div>
     </div>
     
+    <script src = "script.js"></script>
+      
 </body>
 </html>
